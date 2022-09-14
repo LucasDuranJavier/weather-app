@@ -13,9 +13,9 @@ export default function Cards({cities}) {
       min={city.main.temp_min}
       max={city.main.temp_max}
       img={city.weather[0].icon}
-      onClose={() => alert(Cairns.name)}
+      onClose={() => alert(city.name)}
       />
       ))}
   </div>
   );
-};
+}
