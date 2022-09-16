@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import styles from "./Cards.module.css";
-export default function Cards({cities}) {
+export default function Cards({cities, onRemove}) {
   // acá va tu código
   // tip, podés usar un map
   return(
@@ -10,10 +10,10 @@ export default function Cards({cities}) {
       <Card
       key={city.id}
       name={city.name}
-      min={city.main.temp_min}
-      max={city.main.temp_max}
-      img={city.weather[0].icon}
-      onClose={() => alert(city.name)}
+      min={city.min}
+      max={city.max}
+      img={city.img}
+      onClose={() => onRemove(city.id)}
       />
       ))}
   </div>
