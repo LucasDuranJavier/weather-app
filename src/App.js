@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards.jsx";
+import Header from "./components/Header";
 import SearchBar from "./components/SearchBar.jsx";
 
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header></Header>
       <SearchBar onSearch={onSearch} />
       <Cards cities={cities} onRemove={handleRemoveCity} />
     </div>

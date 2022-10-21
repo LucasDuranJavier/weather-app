@@ -36,7 +36,6 @@ export default function Card({ max, min, name, img, onClose }) {
       case "02d":
         return <img src={icon_02d} alt="few clouds" />;
 
-
       case "04d":
         return <img src={icon_04d} alt="broken clouds" />;
 
